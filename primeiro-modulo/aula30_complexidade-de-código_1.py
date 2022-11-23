@@ -10,8 +10,10 @@ RADAR_1 = 60 # velocidade máxima do radar 1
 LOCAL_1 = 100 # local onde o radar 1 está
 RADAR_RANGE = 1 # A distância onde o radar pega
 
-vel_carro_passou_radar_1 = velocidade > RADAR_1
-carro_passou_radar_1 = local_carro >= (LOCAL_1 - RADAR_RANGE) and local_carro <= (LOCAL_1 + RADAR_RANGE)
+vel_carro_passou_radar_1 = velocidade > RADAR_1 
+condicao_1 = local_carro >= (LOCAL_1 - RADAR_RANGE)
+condicao_2 = local_carro <= (LOCAL_1 + RADAR_RANGE)
+carro_passou_radar_1 =  condicao_1 and condicao_2
 carro_multado_radar_1 = carro_passou_radar_1 and vel_carro_passou_radar_1 
 
 if velocidade > RADAR_1:
